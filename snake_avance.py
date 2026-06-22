@@ -2,6 +2,17 @@ import os
 import random
 
 # ==========================================
+# 0. DATOS DEL JUGADOR (NUEVO)
+# ==========================================
+# Limpiamos la consola para la pantalla de bienvenida
+print("\n" * 50)
+print("===================================")
+print("    🐍 BIENVENIDO A SNAKE 🐍      ")
+print("===================================")
+nombre_jugador = input("Por favor, ingresa tu nombre: ")
+edad_jugador = input("Por favor, ingresa tu edad: ")
+
+# ==========================================
 # 1. VARIABLES INICIALES DEL JUEGO
 # ==========================================
 ancho_tablero = 10
@@ -27,9 +38,9 @@ while juego_activo:
     # Limpiamos la consola para que no se amontone el texto (cls en Windows, clear en Mac/Linux)
     os.system("cls" if os.name == "nt" else "clear")
     
-    print("===================================")
-    print(f"   🐍 JUEGO SNAKE | PUNTOS: {puntos} ")
-    print("===================================")
+    print("=============================================================")
+    print(f" 🐍 JUEGO SNAKE | JUGADOR: {nombre_jugador} ({edad_jugador} años) | PUNTOS: {puntos} ")
+    print("=============================================================")
 
     # 3. DIBUJAR EL TABLERO (Bucles for anidados)
     # Recorremos cada fila (Y) y cada columna (X) para dibujar el mapa
@@ -55,7 +66,7 @@ while juego_activo:
     # 6. CONDICIONALES DE MOVIMIENTO
     if movimiento == "q":
         juego_activo = False
-        print("Decidiste salir del juego.")
+        print(f"Decidiste salir del juego. ¡Gracias por jugar, {nombre_jugador}!")
     elif movimiento == "w":
         serpiente_y = serpiente_y - 1 # Subir es restar en el eje Y
     elif movimiento == "s":
@@ -72,7 +83,7 @@ while juego_activo:
     # Verificamos si la serpiente se salió de los límites del 0 al 9
     if serpiente_x < 0 or serpiente_x >= ancho_tablero or serpiente_y < 0 or serpiente_y >= alto_tablero:
         juego_activo = False
-        print("\n¡GAME OVER! Chocaste contra la pared limitante.")
+        print(f"\n¡GAME OVER, {nombre_jugador}! Chocaste contra la pared limitante.")
 
     # 8. CONDICIONALES PARA COMER Y GANAR PUNTOS
     # Si las coordenadas de la serpiente y la comida son iguales
@@ -84,6 +95,6 @@ while juego_activo:
         comida_y = random.randint(0, alto_tablero - 1)
 
 # Mensaje final cuando se rompe el bucle while
-print("===================================")
-print(f" FIN DEL JUEGO. Puntuación final: {puntos}")
-print("===================================")
+print("=============================================================")
+print(f" FIN DEL JUEGO. Puntuación final de {nombre_jugador}: {puntos}")
+print("=============================================================")
