@@ -1,4 +1,6 @@
-El impacto de las nuevas tecnologías en la sociedad: desarrollo y proyección de soluciones informáticas 
+# 🐍 El impacto de las nuevas tecnologías en la sociedad: desarrollo y proyección de soluciones informáticas
+
+Bienvenido al repositorio de mi proyecto final para la materia de Lógica de Programación. El sistema desarrollado consiste en una versión interactiva del clásico videojuego "Snake" implementado en consola.
 
 Bienvenido al repositorio de mi proyecto final para la materia de Lógica de Programación. 
 
