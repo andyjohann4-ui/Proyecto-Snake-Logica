@@ -1,4 +1,4 @@
-# 🐍 Juego Snake V2 (Versión Consola)
+El impacto de las nuevas tecnologías en la sociedad: desarrollo y proyección de soluciones informáticas 
 
 Bienvenido al repositorio de mi proyecto final para la materia de Lógica de Programación. 
 
